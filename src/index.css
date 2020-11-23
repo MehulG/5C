@@ -11,3 +11,95 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.repoCard {
+  min-width: 200px;
+  max-width: 20vw;
+  margin: 1em;
+  padding: 1em;
+  text-align: left;
+  /* background-color: grey; */
+  display: grid;
+  grid-template-columns: 50px 25px 1fr 1fr;
+  grid-template-rows: 25px 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "img img head head"
+    "img img description description";
+  flex: 50%;
+  cursor: pointer;
+}
+
+.head {
+  grid-area: head;
+  font-size: larger;
+  font-weight: bold;
+  color: rebeccapurple;
+}
+
+.description {
+  grid-area: description;
+}
+
+.img {
+  grid-area: img;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.dispUser {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50vw;
+  margin: auto;
+}
+
+.back {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  cursor: pointer;
+  font-size: larger;
+}
+
+.followers {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  font-size: larger;
+}
+
+.repo {
+  padding-top: 2em;
+  width: 50vw;
+  margin: auto;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px 30px;
+  grid-template-areas:
+    "image heading heading heading"
+    "categories descrp descrp descrp";
+}
+
+.repoName {
+  font-size: 3em;
+  font-weight: bolder;
+  padding-top: 1em;
+  grid-area: heading;
+}
+
+.repo_image {
+  grid-area: image;
+  max-width: 10vw;
+  border-radius: 50%;
+}
+.repoDscp{
+  grid-area: descrp;
+}
+.categories{
+  grid-area: categories;
+
+}
